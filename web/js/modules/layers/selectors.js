@@ -107,6 +107,11 @@ export function addLayer(id, spec, layers, layerConfig) {
     throw new Error('No such layer: ' + id);
   }
   def.visible = true;
+  def.min = spec.min || undefined;
+  def.palette = spec.palette || undefined;
+  def.max = spec.max || undefined;
+  def.squashed = spec.squash || undefined;
+
   if (!lodashIsUndefined(spec.visible)) {
     def.visible = spec.visible;
   } else if (!lodashIsUndefined(spec.hidden)) {

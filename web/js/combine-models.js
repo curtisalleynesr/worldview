@@ -50,7 +50,7 @@ export function combineModels(config) {
     models.data = dataModel(models, config);
   }
   if (config.features.naturalEvents) {
-    models.naturalEvents = naturalEventsModel(models, config);
+    // models.naturalEvents = naturalEventsModel(models, config);
   }
 
   return models;

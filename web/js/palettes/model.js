@@ -430,6 +430,7 @@ export function palettesModel(models, config) {
             });
           }
           if (attr.id === 'min') {
+            console.log('min')
             count = self.getCount(layerId);
             values = util.toArray(attr.value.split(';'));
             lodashEach(values, function(value, index) {

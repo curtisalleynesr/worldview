@@ -122,6 +122,7 @@ export default (function(self) {
       };
     }
     lodashEach(state.l, function(qsLayer) {
+      console.log(qsLayer);
       var layerId = qsLayer.id;
       if (config.layers[layerId] && config.layers[layerId].palette) {
         promises.push(self.loadRenderedPalette(config, layerId));
